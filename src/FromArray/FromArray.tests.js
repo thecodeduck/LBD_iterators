@@ -15,8 +15,8 @@ describe('FromArray', () => {
 		const arr = [ 0, 1, 2, 3 ];
 		const result = {
 			value: 0,
-			done: false
-		}
+			done: false,
+		};
 		const test = new FromArray(arr);
 		chai.assert.deepEqual(test.next(), result, 'whoops');
 	});
@@ -24,8 +24,8 @@ describe('FromArray', () => {
 		const arr = [ 0, 1, 2, 3 ];
 		const result = {
 			value: undefined,
-			done: true
-		}
+			done: true,
+		};
 		const test = new FromArray(arr);
 		test.next();
 		test.next();

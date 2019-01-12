@@ -1,15 +1,15 @@
 const Iterator = require('../Iterator.js');
 
-function ToArray(target) {
+function ToString(target) {
 	if (target instanceof Iterator) {
 		this._target = target;
 	} else { throw new Error('target is not an Iterator'); }
 }
 
-ToArray.prototype = Object.create(Iterator.prototype);
+ToString.prototype = Object.create(Iterator.prototype);
 
-ToArray.prototype.next = function next() {
-	const resultArr = [];
+ToString.prototype.next = function next() {
+	let resultStr = '';
 	let current = this._target.next();
 	if (current.done) {
 		return {
@@ -18,14 +18,14 @@ ToArray.prototype.next = function next() {
 		};
 	} else {
 		while (!current.done) {
-			resultArr.push(current.value);
+			resultStr += String(current.value);
 			current = this._target.next();
 		}
 	}
 	return {
-		value: resultArr,
+		value: resultStr,
 		done: false,
 	};
 };
 
-module.exports = ToArray;
+module.exports = ToString;
