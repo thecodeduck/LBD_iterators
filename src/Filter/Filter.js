@@ -15,11 +15,11 @@ Filter.prototype.next = function next() {
   let result;
   let done = false;
   let current = this._target.next();
-  while (!this._func(current.value) && !current.done) {
-    current = this._target.next();
-  }
   if (!current.done) {
-   result = current.value;
+    while (!this._func(current.value)) {
+    current = this._target.next();
+    }
+    result = current.value;
   } else {
     done = true;
   }
