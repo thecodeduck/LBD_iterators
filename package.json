@@ -1,0 +1,32 @@
+{
+  "name": "LBD_iterators",
+  "version": "0.1.0",
+  "description": "Learn By Doing - Iterators!",
+	"private": true,
+  "main": "dist",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thecodeduck/LBD_iterators.git"
+  },
+  "keywords": [],
+  "author": "thecodeduck (thecodeduck@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecodeduck/LBD_iterators/issues"
+  },
+  "homepage": "https://github.com/thecodeduck/LBD_iterators",
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "chai": "^4.1.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {}
+}
