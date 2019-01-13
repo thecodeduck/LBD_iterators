@@ -5,7 +5,7 @@ function FromArrayReverse(target) {
 		this._target = target;
 	} else { throw new Error('target is not an Array'); }
 	this._begin = this._target.length - 1;
-	this._end = 0;
+	this._end = -1;
 }
 
 FromArrayReverse.prototype = Object.create(Iterator.prototype);
